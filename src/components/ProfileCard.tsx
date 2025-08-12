@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { samuelProfile } from '../assets';
 import { socialNavigation } from '../mocks';
 
@@ -35,13 +36,15 @@ function ProfileCard() {
 					))}
 				</div>
 			</div>
-			<button
-				className="mt-16 px-6 py-2
+			<Link to="/contato">
+				<button
+					className="mt-16 px-6 py-2
 				bg-violet-600 dark:bg-violet-500 text-white 
 				rounded-md hover:bg-violet-700 dark:hover:bg-violet-600 transition-colors duration-300"
-			>
-				Vamos conversar
-			</button>
+				>
+					Vamos conversar
+				</button>
+			</Link>
 		</div>
 	);
 }

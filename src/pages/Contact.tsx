@@ -3,8 +3,68 @@ import {
 	MapPinIcon,
 	PhoneIcon,
 } from '@heroicons/react/24/outline';
+import { useState } from 'react';
+import emailjs from 'emailjs-com';
+
+interface FormData {
+	name: string;
+	email: string;
+	subject: string;
+	message: string;
+}
+interface EmailResponse {
+	status: number;
+	text: string;
+}
 
 function Contact() {
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		subject: '',
+		message: '',
+	});
+	const [status, setStatus] = useState('');
+
+	const handleChange = (e: any) => {
+		setFormData({ ...formData, [e.target.name]: e.target.value });
+	};
+
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setStatus('Enviando...');
+
+		const params = {
+			name: formData.name,
+			email: formData.email,
+			subject: formData.subject,
+			message: formData.message,
+		};
+
+		emailjs
+			.send(
+				'service_woqczqq',
+				'template_1av0nov',
+				params,
+				'U9eebTYCcHf2VjmYS'
+			)
+			.then(
+				(_result: EmailResponse) => {
+					setStatus('Mensagem enviada com sucesso!');
+					setFormData({
+						name: '',
+						email: '',
+						subject: '',
+						message: '',
+					});
+				},
+				(error: any) => {
+					console.error(error);
+					setStatus('Erro ao enviar mensagem.');
+				}
+			);
+	};
+
 	return (
 		<div className="relative isolate overflow-hidden bg-gradient-to-b from-gray-100/20 dark:from-gray-900/20 mx-auto max-w-7xl px-4 py-24 sm:px-8">
 			<div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
@@ -69,7 +129,7 @@ function Contact() {
 					<h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
 						Envie uma mensagem
 					</h3>
-					<form className="space-y-6">
+					<form className="space-y-6" onSubmit={handleSubmit}>
 						<div>
 							<label
 								htmlFor="name"
@@ -81,6 +141,8 @@ function Contact() {
 								type="text"
 								id="name"
 								name="name"
+								value={formData.name}
+								onChange={handleChange}
 								className="block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm bg-white/50 dark:bg-gray-800/50 focus:ring-violet-500 focus:border-violet-500 px-4 py-2 text-gray-900 dark:text-white"
 							/>
 						</div>
@@ -96,6 +158,8 @@ function Contact() {
 								type="email"
 								id="email"
 								name="email"
+								value={formData.email}
+								onChange={handleChange}
 								className="block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm bg-white/50 dark:bg-gray-800/50 focus:ring-violet-500 focus:border-violet-500 px-4 py-2 text-gray-900 dark:text-white"
 							/>
 						</div>
@@ -111,6 +175,8 @@ function Contact() {
 								type="text"
 								id="subject"
 								name="subject"
+								value={formData.subject}
+								onChange={handleChange}
 								className="block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm bg-white/50 dark:bg-gray-800/50 focus:ring-violet-500 focus:border-violet-500 px-4 py-2 text-gray-900 dark:text-white"
 							/>
 						</div>
@@ -126,6 +192,8 @@ function Contact() {
 								id="message"
 								name="message"
 								rows={4}
+								value={formData.message}
+								onChange={handleChange}
 								className="block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm bg-white/50 dark:bg-gray-800/50 focus:ring-violet-500 focus:border-violet-500 px-4 py-2 text-gray-900 dark:text-white"
 							></textarea>
 						</div>
@@ -139,6 +207,11 @@ function Contact() {
 							</button>
 						</div>
 					</form>
+					{status && (
+						<p className="text-gray-700 dark:text-gray-300 mt-2">
+							{status}
+						</p>
+					)}
 				</div>
 			</div>
 		</div>
