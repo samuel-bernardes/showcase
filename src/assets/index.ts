@@ -1,4 +1,4 @@
-import logoBlack from "./logoBLack.png";
+import logoBlack from "./logoBlack.png";
 import logoWhite from "./logoWhite.png";
 import samuelHome from "./samuelHome.jpg"
 import projects from "./projects.png"
