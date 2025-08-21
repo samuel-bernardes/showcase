@@ -4,8 +4,11 @@ import {
 	RocketLaunchIcon,
 	TrophyIcon,
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 function HobbiesGrid() {
+	const { t } = useTranslation('hobbies');
+
 	return (
 		<div className="grid grid-cols-2 gap-6">
 			<div className="bg-white/5 p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-violet-400 transition-all">
@@ -13,11 +16,10 @@ function HobbiesGrid() {
 					<ComputerDesktopIcon className="w-6 h-6 text-violet-600 dark:text-violet-400" />
 				</div>
 				<h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-					Games
+					{t('games.title')}
 				</h3>
 				<p className="mt-2 text-gray-600 dark:text-gray-400">
-					Competitivo por natureza, amo jogos de estratégia e FPS.
-					Dota 2 e Counter Strike são meus favoritos!
+					{t('games.description')}
 				</p>
 			</div>
 
@@ -26,11 +28,10 @@ function HobbiesGrid() {
 					<TrophyIcon className="w-6 h-6 text-violet-600 dark:text-violet-400" />
 				</div>
 				<h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-					Esporte
+					{t('sports.title')}
 				</h3>
 				<p className="mt-2 text-gray-600 dark:text-gray-400">
-					Acredito que esportes ensinam disciplina e superação.
-					Torcedor do Cruzeiro e palpiteiro nas horas vagas!
+					{t('sports.description')}
 				</p>
 			</div>
 
@@ -39,11 +40,10 @@ function HobbiesGrid() {
 					<MusicalNoteIcon className="w-6 h-6 text-violet-600 dark:text-violet-400" />
 				</div>
 				<h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-					Música
+					{t('music.title')}
 				</h3>
 				<p className="mt-2 text-gray-600 dark:text-gray-400">
-					Minha playlist é uma fusão de estilos, do rock ao sertanejo
-					amo apreciar uma boa música.
+					{t('music.description')}
 				</p>
 			</div>
 
@@ -52,11 +52,10 @@ function HobbiesGrid() {
 					<RocketLaunchIcon className="w-6 h-6 text-violet-600 dark:text-violet-400" />
 				</div>
 				<h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-					Cultura pop
+					{t('popCulture.title')}
 				</h3>
 				<p className="mt-2 text-gray-600 dark:text-gray-400">
-					Diretamente de Corvinal sou fã de super-herois, animes e
-					outras sagas do multiverso pop.
+					{t('popCulture.description')}
 				</p>
 			</div>
 		</div>

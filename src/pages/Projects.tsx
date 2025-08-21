@@ -1,19 +1,21 @@
 import { projects } from '../mocks';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import { useParams } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
 	const { id } = useParams();
+	const { t } = useTranslation(['projects', 'projectsData']);
 	const project = projects.find((p) => p.id === parseInt(id as string));
 
 	if (!project) {
 		return (
 			<div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 text-center">
 				<h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-					Projeto não encontrado
+					{t('notFound.title')}
 				</h2>
 				<p className="mt-4 text-gray-600 dark:text-gray-300">
-					O projeto solicitado não foi encontrado em nosso portfólio.
+					{t('notFound.description')}
 				</p>
 			</div>
 		);
@@ -34,13 +36,13 @@ export default function Projects() {
 							rel="noopener noreferrer"
 							className="inline-flex items-center rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-500"
 						>
-							Ver projeto
+							{t('viewProject')}
 							<ArrowTopRightOnSquareIcon className="h-4 w-4 ml-2" />
 						</a>
 					</div>
 				</div>
 				<p className="mt-2 text-gray-500 dark:text-gray-400">
-					{project.date}
+					{t(project.dateKey, { ns: 'projectsData' })}
 				</p>
 			</div>
 
@@ -60,10 +62,10 @@ export default function Projects() {
 				{/* Descrição (60% da largura em desktop) */}
 				<div className="lg:col-span-1">
 					<h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-						Sobre o projeto
+						{t('aboutProject')}
 					</h2>
 					<p className="text-gray-600 dark:text-gray-300">
-						{project.description}
+						{t(project.descriptionKey, { ns: 'projectsData' })}
 					</p>
 				</div>
 			</div>
@@ -73,10 +75,10 @@ export default function Projects() {
 				{/* Funcionalidades */}
 				<div>
 					<h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-						Funcionalidades
+						{t('features')}
 					</h2>
 					<ul className="space-y-3">
-						{project.features.map((feature, index) => (
+						{project.featuresKeys.map((featureKey, index) => (
 							<li key={index} className="flex items-start">
 								<div className="flex-shrink-0 mt-1">
 									<div className="flex items-center justify-center h-5 w-5 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400">
@@ -96,7 +98,7 @@ export default function Projects() {
 									</div>
 								</div>
 								<p className="ml-3 text-gray-600 dark:text-gray-300">
-									{feature}
+									{t(featureKey, { ns: 'projectsData' })}
 								</p>
 							</li>
 						))}
@@ -106,7 +108,7 @@ export default function Projects() {
 				{/* Tecnologias */}
 				<div>
 					<h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-						Tecnologias utilizadas
+						{t('technologies')}
 					</h2>
 					<div className="flex flex-wrap gap-2">
 						{project.technologies.map((tech) => (
@@ -123,44 +125,45 @@ export default function Projects() {
 
 			<div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
 				<h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-					Detalhes do projeto
+					{t('projectDetails')}
 				</h2>
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 					<div>
 						<h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-							Status
+							{t('status')}
 						</h3>
 						<p className="text-gray-600 dark:text-gray-300">
-							{project.date.includes('Presente') ? (
+							{t(project.dateKey, { ns: 'projectsData' }).includes('Presente') || 
+							 t(project.dateKey, { ns: 'projectsData' }).includes('Present') ? (
 								<span className="inline-flex items-center rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400">
-									Em andamento
+									{t('inProgress')}
 								</span>
 							) : (
 								<span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900/30 dark:text-green-400">
-									Concluído
+									{t('completed')}
 								</span>
 							)}
 						</p>
 					</div>
 					<div>
 						<h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-							Período
+							{t('period')}
 						</h3>
 						<p className="text-gray-600 dark:text-gray-300">
-							{project.date}
+							{t(project.dateKey, { ns: 'projectsData' })}
 						</p>
 					</div>
 					<div>
 						<h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-							Categoria
+							{t('category')}
 						</h3>
 						<p className="text-gray-600 dark:text-gray-300">
-							{project.category}
+							{t(project.categoryKey, { ns: 'projectsData' })}
 						</p>
 					</div>
 					<div>
 						<h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-							Links
+							{t('links')}
 						</h3>
 						<div className="flex flex-col space-y-2">
 							<a
@@ -170,7 +173,7 @@ export default function Projects() {
 								className="inline-flex items-center text-violet-600 dark:text-violet-400 hover:text-violet-800 dark:hover:text-violet-300 text-sm"
 							>
 								<ArrowTopRightOnSquareIcon className="h-4 w-4 mr-1.5" />
-								Acessar projeto
+								{t('accessProject')}
 							</a>
 						</div>
 					</div>

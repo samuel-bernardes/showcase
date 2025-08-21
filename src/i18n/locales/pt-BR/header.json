@@ -1,0 +1,10 @@
+{
+  "home": "Home",
+  "about": "Sobre",
+  "contact": "Contato",
+  "toggleTheme": "Alternar para o modo {{mode}}",
+  "light": "claro",
+  "dark": "escuro",
+  "openMenu": "Abrir menu",
+  "closeMenu": "Fechar menu"
+}

@@ -6,8 +6,11 @@ import {
 	ProfileCard,
 	Timeline,
 } from '../components';
+import { useTranslation } from 'react-i18next';
 
 function About() {
+	const { t } = useTranslation('about');
+
 	return (
 		<div className="relative isolate overflow-hidden bg-gradient-to-b from-gray-100/20 dark:from-gray-900/20">
 			<div className="max-w-7xl py-12 sm:py-24 mx-auto px-4 sm:px-8">
@@ -22,22 +25,14 @@ function About() {
 					{/* Conteúdo do lado direito */}
 					<div className="flex flex-col gap-6 w-full max-w-2xl">
 						<h1 className="font-bold text-4xl sm:text-5xl text-gray-900 dark:text-gray-100 text-center sm:text-left">
-							Determinação e paixão por {''}
+							{t('mainTitle.part1')}{' '}
 							<span className="text-violet-600 dark:text-violet-400">
-								aprendizado!
+								{t('mainTitle.part2')}
 							</span>
 						</h1>
 
 						<p className="text-gray-600 dark:text-gray-300 text-center sm:text-left">
-							Sou Samuel Bernardes, estudante de Engenharia de
-							Computação no CEFET-MG e formado como Técnico em
-							Informática pelo IFMG. Possuo experiência prática em
-							desenvolvimento web e mobile, utilizando React,
-							React Native e TypeScript, além de familiaridade com
-							backend em C# e Node.js. Tenho interesse em ampliar
-							minha atuação em projetos acadêmicos e profissionais
-							que envolvam inovação tecnológica, pesquisa e
-							desenvolvimento de software de alta qualidade.
+							{t('description')}
 						</p>
 
 						{/* Estatísticas - Grid em mobile, flex em desktop */}
@@ -45,19 +40,19 @@ function About() {
 							<div className="text-center sm:text-left">
 								<h4 className="text-5xl sm:text-6xl">+4</h4>
 								<span className="text-sm sm:text-base">
-									Anos de experiência
+									{t('stats.yearsExperience')}
 								</span>
 							</div>
 							<div className="text-center sm:text-left">
 								<h4 className="text-5xl sm:text-6xl">+10</h4>
 								<span className="text-sm sm:text-base">
-									Projetos concluídos
+									{t('stats.projectsCompleted')}
 								</span>
 							</div>
 							<div className="col-span-2 text-center sm:text-left sm:col-auto">
 								<h4 className="text-5xl sm:text-6xl">+25</h4>
 								<span className="text-sm sm:text-base">
-									Ferramentas utilizadas
+									{t('stats.toolsUsed')}
 								</span>
 							</div>
 						</div>
@@ -76,15 +71,14 @@ function About() {
 					<div className="w-full lg:w-1/2 space-y-8">
 						<div>
 							<h2 className="text-5xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-gray-100">
-								Conheça o{' '}
+								{t('personalStory.title.part1')}{' '}
 								<span className="text-violet-600 dark:text-violet-400">
-									Samuel
+									{t('personalStory.title.part2')}
 								</span>{' '}
-								além do código
+								{t('personalStory.title.part3')}
 							</h2>
 							<p className="mt-6 text-xl/8 text-gray-600 dark:text-gray-400">
-								Quando não estou desenvolvendo soluções
-								incríveis, você me encontra mergulhado em...
+								{t('personalStory.subtitle')}
 							</p>
 						</div>
 
@@ -101,12 +95,11 @@ function About() {
 							<div className="flex items-center gap-3 mb-4">
 								<MusicalNoteIcon className="w-8 h-8 text-violet-400" />
 								<h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-									Minha Trilha Sonora
+									{t('musicSection.title')}
 								</h3>
 							</div>
 							<p className="text-gray-600 dark:text-gray-300 mb-4">
-								Essa playlist acompanha meus momentos de
-								codificação e relaxamento.
+								{t('musicSection.description')}
 							</p>
 							<iframe
 								style={{
@@ -127,7 +120,7 @@ function About() {
 						{/* Personal Timeline */}
 						<div className="bg-white/5 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
 							<h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-								Minha Jornada
+								{t('timelineSection.title')}
 							</h3>
 							<Timeline />
 						</div>

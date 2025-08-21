@@ -1,6 +1,9 @@
 import { socialNavigation } from '../../mocks';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+	const { t } = useTranslation('footer');
+
 	return (
 		<footer className="bg-gray-100 dark:bg-gray-900">
 			<div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
@@ -20,11 +23,10 @@ function Footer() {
 				</div>
 				<div className="mt-8 md:order-1 md:mt-0">
 					<p className="text-center text-sm text-gray-500 dark:text-gray-400">
-						&copy; {new Date().getFullYear()} Samuel Bernardes.
-						Todos os direitos reservados.
+						© {t('copyright', { year: new Date().getFullYear() })}
 					</p>
 					<p className="mt-1 text-center text-xs text-gray-400 dark:text-gray-500">
-						Feito com 💜 e um pouco de ☕
+						{t('madeWith')}
 					</p>
 				</div>
 			</div>

@@ -1,0 +1,27 @@
+{
+  "mainTitle": {
+    "part1": "Determination and passion for",
+    "part2": "learning!"
+  },
+  "description": "I'm Samuel Bernardes, a Computer Engineering student at CEFET-MG and graduated as an Informatics Technician from IFMG. I have practical experience in web and mobile development, using React, React Native and TypeScript, in addition to familiarity with backend in C# and Node.js. I'm interested in expanding my work on academic and professional projects involving technological innovation, research and high-quality software development.",
+  "stats": {
+    "yearsExperience": "Years of experience",
+    "projectsCompleted": "Projects completed",
+    "toolsUsed": "Tools used"
+  },
+  "personalStory": {
+    "title": {
+      "part1": "Get to know",
+      "part2": "Samuel",
+      "part3": "beyond the code"
+    },
+    "subtitle": "When I'm not developing amazing solutions, you'll find me immersed in..."
+  },
+  "musicSection": {
+    "title": "My Soundtrack",
+    "description": "This playlist accompanies my coding and relaxation moments."
+  },
+  "timelineSection": {
+    "title": "My Journey"
+  }
+}

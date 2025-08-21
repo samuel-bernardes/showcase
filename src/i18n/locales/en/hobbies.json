@@ -1,0 +1,18 @@
+{
+  "games": {
+    "title": "Games",
+    "description": "Competitive by nature, I love strategy and FPS games. Dota 2 and Counter Strike are my favorites!"
+  },
+  "sports": {
+    "title": "Sports",
+    "description": "I believe sports teach discipline and overcoming. Cruzeiro fan and occasional bettor in my free time!"
+  },
+  "music": {
+    "title": "Music",
+    "description": "My playlist is a fusion of styles, from rock to sertanejo, I love appreciating good music."
+  },
+  "popCulture": {
+    "title": "Pop culture",
+    "description": "Straight from Ravenclaw, I'm a fan of superheroes, anime and other sagas from the pop multiverse."
+  }
+}

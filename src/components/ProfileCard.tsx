@@ -1,24 +1,28 @@
 import { Link } from 'react-router';
 import { samuelProfile } from '../assets';
 import { socialNavigation } from '../mocks';
+import { useTranslation } from 'react-i18next';
 
 function ProfileCard() {
+	const { t } = useTranslation('profile');
+
 	return (
 		<div className="bg-white dark:bg-gray-800 p-6 flex flex-col items-center w-80 h-full rounded-3xl shadow-md">
 			<div className="flex flex-col items-center gap-8 mx-auto">
 				<img
 					src={samuelProfile}
 					className="w-52 h-60 object-cover rounded-lg shadow-md shadow-violet-500 dark:shadow-violet-400"
+					alt={t('imageAlt')}
 				/>
 				<div className="text-center">
 					<h3 className="font-bold text-3xl text-gray-900 dark:text-gray-100">
-						Samuel Bernardes
+						{t('name')}
 					</h3>
 					<p className="text-lg text-violet-600 dark:text-violet-400 mt-1">
-						Desenvolvedor de Software
+						{t('jobTitle')}
 					</p>
 					<p className="text-gray-600 dark:text-gray-300 mt-2">
-						Belo Horizonte, Minas Gerais - Brasil
+						{t('location')}
 					</p>
 				</div>
 				<div className="flex gap-2 items-center">
@@ -42,7 +46,7 @@ function ProfileCard() {
 				bg-violet-600 dark:bg-violet-500 text-white 
 				rounded-md hover:bg-violet-700 dark:hover:bg-violet-600 transition-colors duration-300"
 				>
-					Vamos conversar
+					{t('contactButton')}
 				</button>
 			</Link>
 		</div>

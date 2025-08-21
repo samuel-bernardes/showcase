@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import type { projects } from '../mocks';
+import { useTranslation } from 'react-i18next';
 
 interface IProjectCardProps {
 	project: (typeof projects)[number];
@@ -7,6 +8,7 @@ interface IProjectCardProps {
 
 function ProjectCard(props: IProjectCardProps) {
 	const { project } = props;
+	const { t } = useTranslation(['projectsData']);
 
 	return (
 		<Link to={`/projetos/${project.id}`}>
@@ -15,7 +17,7 @@ function ProjectCard(props: IProjectCardProps) {
 				className="relative h-full isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pt-80 pb-8 sm:pt-48 lg:pt-80 hover:scale-[1.02] transition-transform duration-300 group"
 			>
 				<img
-					alt={`Captura do projeto ${project.title}`}
+					alt={t('projectImageAlt', { title: project.title })}
 					src={project.imageUrl}
 					className="absolute inset-0 -z-10 h-full w-full object-cover brightness-90 group-hover:brightness-75 transition-all duration-500"
 				/>
@@ -30,9 +32,11 @@ function ProjectCard(props: IProjectCardProps) {
 				<div className="flex flex-wrap items-center gap-y-1 text-sm/6 text-gray-300">
 					<div className="flex items-center gap-x-2">
 						<span className="inline-flex items-center rounded-md bg-gray-800/80 px-2 py-1 text-xs font-medium text-gray-300 ring-1 ring-inset ring-gray-700">
-							{project.category}
+							{t(project.categoryKey, { ns: 'projectsData' })}
 						</span>
-						<span className="text-gray-300">{project.date}</span>
+						<span className="text-gray-300">
+							{t(project.dateKey, { ns: 'projectsData' })}
+						</span>
 					</div>
 				</div>
 
@@ -43,7 +47,7 @@ function ProjectCard(props: IProjectCardProps) {
 						{project.title}
 					</h3>
 					<p className="mt-2 line-clamp-2 text-sm/relaxed text-gray-300">
-						{project.description}
+						{t(project.descriptionKey, { ns: 'projectsData' })}
 					</p>
 				</div>
 

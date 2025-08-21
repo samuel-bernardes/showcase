@@ -1,0 +1,18 @@
+{
+  "notFound": {
+    "title": "Projeto não encontrado",
+    "description": "O projeto solicitado não foi encontrado em nosso portfólio."
+  },
+  "viewProject": "Ver projeto",
+  "aboutProject": "Sobre o projeto",
+  "features": "Funcionalidades",
+  "technologies": "Tecnologias utilizadas",
+  "projectDetails": "Detalhes do projeto",
+  "status": "Status",
+  "inProgress": "Em andamento",
+  "completed": "Concluído",
+  "period": "Período",
+  "category": "Categoria",
+  "links": "Links",
+  "accessProject": "Acessar projeto"
+}

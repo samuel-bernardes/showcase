@@ -1,0 +1,27 @@
+{
+  "mainTitle": {
+    "part1": "Determinação e paixão por",
+    "part2": "aprendizado!"
+  },
+  "description": "Sou Samuel Bernardes, estudante de Engenharia de Computação no CEFET-MG e formado como Técnico em Informática pelo IFMG. Possuo experiência prática em desenvolvimento web e mobile, utilizando React, React Native e TypeScript, além de familiaridade com backend em C# e Node.js. Tenho interesse em ampliar minha atuação em projetos acadêmicos e profissionais que envolvam inovação tecnológica, pesquisa e desenvolvimento de software de alta qualidade.",
+  "stats": {
+    "yearsExperience": "Anos de experiência",
+    "projectsCompleted": "Projetos concluídos",
+    "toolsUsed": "Ferramentas utilizadas"
+  },
+  "personalStory": {
+    "title": {
+      "part1": "Conheça o",
+      "part2": "Samuel",
+      "part3": "além do código"
+    },
+    "subtitle": "Quando não estou desenvolvendo soluções incríveis, você me encontra mergulhado em..."
+  },
+  "musicSection": {
+    "title": "Minha Trilha Sonora",
+    "description": "Essa playlist acompanha meus momentos de codificação e relaxamento."
+  },
+  "timelineSection": {
+    "title": "Minha Jornada"
+  }
+}

@@ -5,13 +5,8 @@ import {
 } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { useTranslation } from 'react-i18next';
 
-interface FormData {
-	name: string;
-	email: string;
-	subject: string;
-	message: string;
-}
 interface EmailResponse {
 	status: number;
 	text: string;
@@ -25,6 +20,7 @@ function Contact() {
 		message: '',
 	});
 	const [status, setStatus] = useState('');
+	const { t } = useTranslation('contact');
 
 	const handleChange = (e: any) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,7 +28,7 @@ function Contact() {
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		setStatus('Enviando...');
+		setStatus(t('status.sending'));
 
 		const params = {
 			name: formData.name,
@@ -50,7 +46,7 @@ function Contact() {
 			)
 			.then(
 				(_result: EmailResponse) => {
-					setStatus('Mensagem enviada com sucesso!');
+					setStatus(t('status.success'));
 					setFormData({
 						name: '',
 						email: '',
@@ -60,7 +56,7 @@ function Contact() {
 				},
 				(error: any) => {
 					console.error(error);
-					setStatus('Erro ao enviar mensagem.');
+					setStatus(t('status.error'));
 				}
 			);
 	};
@@ -71,12 +67,10 @@ function Contact() {
 				{/* Seção de Informações */}
 				<div>
 					<h2 className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
-						Entre em contato comigo
+						{t('title')}
 					</h2>
 					<p className="text-lg text-gray-600 dark:text-gray-300 mt-4">
-						Quer discutir um projeto, colaborar ou apenas bater um
-						papo sobre tecnologia? Estou sempre aberto a novas
-						conexões e oportunidades.
+						{t('description')}
 					</p>
 
 					<div className="space-y-6 mt-8">
@@ -86,7 +80,7 @@ function Contact() {
 							</div>
 							<div>
 								<h3 className="text-base font-medium text-gray-900 dark:text-white">
-									Email
+									{t('contactInfo.email')}
 								</h3>
 								<p className="text-gray-600 dark:text-gray-400">
 									sbernardes467@gmail.com
@@ -100,7 +94,7 @@ function Contact() {
 							</div>
 							<div>
 								<h3 className="text-base font-medium text-gray-900 dark:text-white">
-									Telefone
+									{t('contactInfo.phone')}
 								</h3>
 								<p className="text-gray-600 dark:text-gray-400">
 									+55 (31) 99994-3563
@@ -114,10 +108,10 @@ function Contact() {
 							</div>
 							<div>
 								<h3 className="text-base font-medium text-gray-900 dark:text-white">
-									Localização
+									{t('contactInfo.location')}
 								</h3>
 								<p className="text-gray-600 dark:text-gray-400">
-									Belo Horizonte, Minas Gerais - Brasil
+									{t('contactInfo.locationValue')}
 								</p>
 							</div>
 						</div>
@@ -127,7 +121,7 @@ function Contact() {
 				{/* Formulário de Contato */}
 				<div className="rounded-xl bg-white/5 p-8 shadow-lg ring-1 ring-gray-200 dark:ring-gray-800">
 					<h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-						Envie uma mensagem
+						{t('form.title')}
 					</h3>
 					<form className="space-y-6" onSubmit={handleSubmit}>
 						<div>
@@ -135,7 +129,7 @@ function Contact() {
 								htmlFor="name"
 								className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
 							>
-								Nome
+								{t('form.name')}
 							</label>
 							<input
 								type="text"
@@ -152,7 +146,7 @@ function Contact() {
 								htmlFor="email"
 								className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
 							>
-								Email
+								{t('form.email')}
 							</label>
 							<input
 								type="email"
@@ -169,7 +163,7 @@ function Contact() {
 								htmlFor="subject"
 								className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
 							>
-								Assunto
+								{t('form.subject')}
 							</label>
 							<input
 								type="text"
@@ -186,7 +180,7 @@ function Contact() {
 								htmlFor="message"
 								className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
 							>
-								Mensagem
+								{t('form.message')}
 							</label>
 							<textarea
 								id="message"
@@ -203,7 +197,7 @@ function Contact() {
 								type="submit"
 								className="inline-flex justify-center rounded-lg bg-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 transition-colors"
 							>
-								Enviar mensagem
+								{t('form.submit')}
 							</button>
 						</div>
 					</form>

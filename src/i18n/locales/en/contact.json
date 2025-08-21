@@ -1,0 +1,23 @@
+{
+  "title": "Get in touch with me",
+  "description": "Want to discuss a project, collaborate or just chat about technology? I'm always open to new connections and opportunities.",
+  "contactInfo": {
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "locationValue": "Belo Horizonte, Minas Gerais - Brazil"
+  },
+  "form": {
+    "title": "Send a message",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Send message"
+  },
+  "status": {
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Error sending message."
+  }
+}

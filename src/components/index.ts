@@ -5,5 +5,6 @@ import HobbiesGrid from './HobbiesGrid';
 import Galery from './Galery';
 import Timeline from './Timeline';
 import ProjectCard from './ProjectCard';
+import LanguageSwitcher from './LanguageSwitcher';
 
-export { MainLayout, ProfileCard, CodeSnippet, HobbiesGrid, Galery, Timeline, ProjectCard };
+export { MainLayout, ProfileCard, CodeSnippet, HobbiesGrid, Galery, Timeline, ProjectCard, LanguageSwitcher };

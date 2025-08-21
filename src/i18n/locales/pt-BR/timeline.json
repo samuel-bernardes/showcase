@@ -1,0 +1,22 @@
+{
+  "2019": {
+    "title": "2019 - Primeiras Linhas de Código",
+    "description": "Descobri minha paixão por programação através do curso técnico no ensino médio."
+  },
+  "2022": {
+    "firstExperience": {
+      "title": "2022 - Primeira Experiência Profissional",
+      "description": "Após a formatura ingresso em minha primeira vaga como estágiario"
+    },
+    "college": {
+      "title": "2022 - Ingresso na Faculdade",
+      "description": "Matricula em Engenharia de Computação pelo CEFET (Centro Federal de Educação Tecnológica de Minas Gerais)"
+    }
+  },
+  "2024": {
+    "appPublication": {
+      "title": "2024 - Publicação do primeiro APP como líder",
+      "description": "Desenvolvimento e deploy da primeira aplicação no papel de líder e desenvolvedor principal"
+    }
+  }
+}

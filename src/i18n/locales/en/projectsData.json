@@ -1,0 +1,59 @@
+{
+	"dataviva": {
+		"description": "DataViva is a data visualization platform focused on Big Data. Its mission is to support decision-making processes and scientific investigation through the use of large datasets, strengthening a data-driven culture in both public and private spheres. The platform is developed using open source technologies, enabling replication, validation, and contribution from the scientific community. It was necessary to employ data optimization techniques to provide a responsive, fast, and powerful platform capable of generating over 1 billion possibilities of interactive visualizations. Throughout its trajectory, DataViva has sought, more than just providing access to information, to add value to data through its technical team. This has been achieved through the development of scientific publications, articles in journals and blogs to systematize the knowledge generated from the analysis of massive data volumes. Currently, DataViva's data repository comprises over 1000 GB stored in the cloud. The project is funded by FAPEMIG and executed by CEDEPLAR.",
+		"date": "Jan 2023 - Present",
+		"category": "Big Data and WEB",
+		"features": [
+			"Data visualization",
+			"Custom charts",
+			"Data download",
+			"Dynamic content",
+			"Interface design"
+		]
+	},
+	"formulaDota": {
+		"description": "A complete platform of courses and subscriptions, designed for players who want to evolve in the competitive scene. Formula has arrived to transform the Dota 2 scene in Brazil! A project conceived by Peter \"PPA\" comes to teach the paths to elevate your gameplay level! On the platform you will find courses from basic to advanced in gameplay, the pro method with teachers specialized in specific heroes, and the Formula league!",
+		"date": "Dec 2024 - Present",
+		"category": "WEB Application",
+		"features": [
+			"Integration with Mercado Pago",
+			"Social login with Discord",
+			"Admin system",
+			"Points and progression system",
+			"Evaluative forms",
+			"Interface design"
+		]
+	},
+	"midasClub": {
+		"description": "Institutional website of the largest Dota 2 in-house community in Brazil, focusing on performance, clarity, and community engagement. From the initial idea to the largest in-house community in Latin America, each milestone represents our commitment to the Dota 2 scene. The name \"Midas\" represents our mission: to transform ordinary players into competitive gold. Like the legendary King Midas, we believe in the transforming touch - but here, gold is measured in skill, respect, and constant growth within the game we love.",
+		"date": "May 2025 - June 2025",
+		"category": "WEB Application",
+		"features": [
+			"Focus on user experience",
+			"Responsive design",
+			"Integration with Google Sheets",
+			"Interface design"
+		]
+	},
+	"obd": {
+		"description": "The Development Observatory (ObD) is a research group at Cedeplar-UFMG registered with CNPq that has as its general objective the systematic production of data and studies on inclusive and sustainable economic development both nationally and regionally, with emphasis on public policy analysis. The webapp was created to integrate various applied and theoretical research lines developed by Cedeplar-UFMG professors, which is physically located at the Faculty of Economic Sciences (FACE).",
+		"date": "Dec 2024 - July 2025",
+		"category": "WEB Application",
+		"features": [
+			"Admin system",
+			"Responsive design",
+			"Dynamic content",
+			"Interface design"
+		]
+	},
+	"pareFumar": {
+		"description": "Pare de Fumar Fumando (Stop Smoking by Smoking) is an application for Android and IOS developed with the intention of helping smokers quit their addiction. It has various internal dynamics that assist people in this journey. With daily challenges, you will observe the decrease in your constant desire to smoke, taking these new small habits into your daily life. The app already has over 700 downloads and was developed by Dr. Carlos Augusto, psychologist and psychotherapist, Master in Clinical Psychology, and also a specialist in Tobacco Addiction treatment who created each of the contents you will find in this application.",
+		"date": "March 2022 - May 2022",
+		"category": "WEB Application",
+		"features": [
+			"Custom video player",
+			"Rating system",
+			"Student progress tracking"
+		]
+	}
+}

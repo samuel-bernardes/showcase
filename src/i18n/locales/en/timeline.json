@@ -1,0 +1,22 @@
+{
+  "2019": {
+    "title": "2019 - First Lines of Code",
+    "description": "Discovered my passion for programming through technical course in high school."
+  },
+  "2022": {
+    "firstExperience": {
+      "title": "2022 - First Professional Experience",
+      "description": "After graduation, started my first position as an intern"
+    },
+    "college": {
+      "title": "2022 - College Enrollment",
+      "description": "Enrolled in Computer Engineering at CEFET (Federal Center of Technological Education of Minas Gerais)"
+    }
+  },
+  "2024": {
+    "appPublication": {
+      "title": "2024 - First APP Publication as Lead",
+      "description": "Development and deployment of the first application in the role of lead and main developer"
+    }
+  }
+}

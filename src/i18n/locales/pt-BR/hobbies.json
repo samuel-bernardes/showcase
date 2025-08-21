@@ -1,0 +1,18 @@
+{
+  "games": {
+    "title": "Games",
+    "description": "Competitivo por natureza, amo jogos de estratégia e FPS. Dota 2 e Counter Strike são meus favoritos!"
+  },
+  "sports": {
+    "title": "Esporte",
+    "description": "Acredito que esportes ensinam disciplina e superação. Torcedor do Cruzeiro e palpiteiro nas horas vagas!"
+  },
+  "music": {
+    "title": "Música",
+    "description": "Minha playlist é uma fusão de estilos, do rock ao sertanejo amo apreciar uma boa música."
+  },
+  "popCulture": {
+    "title": "Cultura pop",
+    "description": "Diretamente de Corvinal sou fã de super-herois, animes e outras sagas do multiverso pop."
+  }
+}
