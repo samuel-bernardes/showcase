@@ -105,4 +105,4 @@ Este projeto está sob a licença MIT. Veja o arquivo  [LICENSE](https://license
     
 -   GitHub:  [@samuel-bernardes](https://github.com/samuel-bernardes)
     
--   Portfolio:  [Deploy Vercel](https://showcase-sage-seven.vercel.app/])
+-   Portfolio:  [Deploy Vercel](https://showcase-sage-seven.vercel.app)
