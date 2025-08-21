@@ -93,10 +93,6 @@ npm run dev
 yarn dev
 ```
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo  [LICENSE](https://license/)  para mais detalhes.
-
 ## 📞 Contato
 
 **Samuel Bernardes**  -  [sbernardes467@gmail.com](https://mailto:sbernardes467@gmail.com/)
