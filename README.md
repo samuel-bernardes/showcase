@@ -105,4 +105,4 @@ Este projeto está sob a licença MIT. Veja o arquivo  [LICENSE](https://license
     
 -   GitHub:  [@samuel-bernardes](https://github.com/samuel-bernardes)
     
--   Portfolio:  [[https://seu-portfolio.com](https://seu-portfolio.com/](https://showcase-sage-seven.vercel.app/))
+-   Portfolio:  [https://seu-portfolio.com](https://seu-portfolio.com/](https://showcase-sage-seven.vercel.app/))
