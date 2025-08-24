@@ -102,32 +102,32 @@ function Header({ colorMode, setColorMode }: IHeaderProps) {
 							onClick={() => setMobileMenuOpen(false)}
 						>
 							<img
-								src={
-									colorMode === 'light'
-										? logoBlack
-										: logoWhite
-								}
+								src={logoBlack}
 								alt="logo"
 								className="h-12"
 							/>
 						</Link>
 						<div className="flex items-center space-x-4">
-							<button
-								onClick={toggleColorMode}
-								className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
-								aria-label={t('toggleTheme', {
-									mode:
-										colorMode === 'light'
-											? t('dark')
-											: t('light'),
-								})}
-							>
-								{colorMode === 'light' ? (
-									<MoonIcon className="h-5 w-5 text-violet-600" />
-								) : (
-									<SunIcon className="h-5 w-5 text-yellow-400" />
-								)}
-							</button>
+							<div className="flex">
+								<button
+									onClick={toggleColorMode}
+									className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+									aria-label={t('toggleTheme', {
+										mode:
+											colorMode === 'light'
+												? t('dark')
+												: t('light'),
+									})}
+								>
+									{colorMode === 'light' ? (
+										<MoonIcon className="h-5 w-5 text-violet-600" />
+									) : (
+										<SunIcon className="h-5 w-5 text-yellow-400" />
+									)}
+								</button>
+
+								<LanguageSwitcher />
+							</div>
 							<button
 								type="button"
 								onClick={() => setMobileMenuOpen(false)}

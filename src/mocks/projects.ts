@@ -55,7 +55,7 @@ export const projects = [
 	{
 		id: 4,
 		title: 'Observatório do Desenvolvimento',
-		href: 'https://midasclub.com.br/',
+		href: 'https://obd.cedeplar.ufmg.br/',
 		descriptionKey: 'obd.description',
 		imageUrl: obd,
 		dateKey: 'obd.date',

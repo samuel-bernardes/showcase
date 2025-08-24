@@ -77,11 +77,7 @@ function CodeSnippet() {
 								</span>
 								<span className="text-[#ff79c6]">,</span>{' '}
 								<span className="text-[#f1fa8c]">
-									"Interação com cliente"
-								</span>
-								<span className="text-[#ff79c6]">,</span>{' '}
-								<span className="text-[#f1fa8c]">
-									"Persistente"
+									"Persistencia"
 								</span>
 								<span className="text-[#ff79c6]">]</span>
 								<span className="text-[#ff79c6]">,</span>
