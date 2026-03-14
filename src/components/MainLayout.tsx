@@ -3,8 +3,6 @@ import { Outlet } from 'react-router';
 import classNames from '../utils/TailwindClassname';
 import Header from './ui/Header';
 import Footer from './ui/Footer';
-/* import Header from './Header';
-import Footer from './Footer'; */
 
 function MainLayout() {
 	const [colorMode, setColorMode] = useState<'light' | 'dark'>('dark');

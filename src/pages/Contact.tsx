@@ -3,17 +3,20 @@ import {
 	MapPinIcon,
 	PhoneIcon,
 } from '@heroicons/react/24/outline';
-import { useState } from 'react';
+import { useState, type ChangeEvent, type FormEvent } from 'react';
 import emailjs from 'emailjs-com';
 import { useTranslation } from 'react-i18next';
+import { Reveal } from '../components';
 
-interface EmailResponse {
-	status: number;
-	text: string;
+interface ContactFormData {
+	name: string;
+	email: string;
+	subject: string;
+	message: string;
 }
 
 function Contact() {
-	const [formData, setFormData] = useState({
+	const [formData, setFormData] = useState<ContactFormData>({
 		name: '',
 		email: '',
 		subject: '',
@@ -22,11 +25,13 @@ function Contact() {
 	const [status, setStatus] = useState('');
 	const { t } = useTranslation('contact');
 
-	const handleChange = (e: any) => {
+	const handleChange = (
+		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setStatus(t('status.sending'));
 
@@ -45,7 +50,7 @@ function Contact() {
 				'U9eebTYCcHf2VjmYS'
 			)
 			.then(
-				(_result: EmailResponse) => {
+				() => {
 					setStatus(t('status.success'));
 					setFormData({
 						name: '',
@@ -54,7 +59,7 @@ function Contact() {
 						message: '',
 					});
 				},
-				(error: any) => {
+				(error: unknown) => {
 					console.error(error);
 					setStatus(t('status.error'));
 				}
@@ -64,8 +69,7 @@ function Contact() {
 	return (
 		<div className="relative isolate overflow-hidden bg-gradient-to-b from-gray-100/20 dark:from-gray-900/20 mx-auto max-w-7xl px-4 py-24 sm:px-8">
 			<div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-				{/* Seção de Informações */}
-				<div>
+				<Reveal className="space-y-8">
 					<h2 className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
 						{t('title')}
 					</h2>
@@ -74,7 +78,10 @@ function Contact() {
 					</p>
 
 					<div className="space-y-6 mt-8">
-						<div className="flex items-center gap-4">
+						<Reveal
+							className="flex items-center gap-4 lift-hover rounded-xl"
+							delay={100}
+						>
 							<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-100 dark:bg-violet-900/30">
 								<EnvelopeIcon className="h-6 w-6 text-violet-600 dark:text-violet-400" />
 							</div>
@@ -86,9 +93,12 @@ function Contact() {
 									sbernardes467@gmail.com
 								</p>
 							</div>
-						</div>
+						</Reveal>
 
-						<div className="flex items-center gap-4">
+						<Reveal
+							className="flex items-center gap-4 lift-hover rounded-xl"
+							delay={180}
+						>
 							<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-100 dark:bg-violet-900/30">
 								<PhoneIcon className="h-6 w-6 text-violet-600 dark:text-violet-400" />
 							</div>
@@ -100,9 +110,12 @@ function Contact() {
 									+55 (31) 99994-3563
 								</p>
 							</div>
-						</div>
+						</Reveal>
 
-						<div className="flex items-center gap-4">
+						<Reveal
+							className="flex items-center gap-4 lift-hover rounded-xl"
+							delay={260}
+						>
 							<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-100 dark:bg-violet-900/30">
 								<MapPinIcon className="h-6 w-6 text-violet-600 dark:text-violet-400" />
 							</div>
@@ -114,12 +127,14 @@ function Contact() {
 									{t('contactInfo.locationValue')}
 								</p>
 							</div>
-						</div>
+						</Reveal>
 					</div>
-				</div>
+				</Reveal>
 
-				{/* Formulário de Contato */}
-				<div className="rounded-xl bg-white/5 p-8 shadow-lg ring-1 ring-gray-200 dark:ring-gray-800">
+				<Reveal
+					className="rounded-xl bg-white/5 p-8 shadow-lg ring-1 ring-gray-200 dark:ring-gray-800"
+					delay={150}
+				>
 					<h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
 						{t('form.title')}
 					</h3>
@@ -206,7 +221,7 @@ function Contact() {
 							{status}
 						</p>
 					)}
-				</div>
+				</Reveal>
 			</div>
 		</div>
 	);

@@ -1,6 +1,11 @@
+import Reveal from './Reveal';
+
 function CodeSnippet() {
 	return (
-		<div className="relative isolate overflow-hidden bg-violet-400 dark:bg-violet-600 px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pt-16 sm:pr-0 sm:pl-16 lg:mx-0 lg:max-w-none">
+		<Reveal
+			className="relative isolate overflow-hidden bg-violet-400 dark:bg-violet-600 px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pt-16 sm:pr-0 sm:pl-16 lg:mx-0 lg:max-w-none"
+			delay={120}
+		>
 			<div
 				aria-hidden="true"
 				className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-violet-100 dark:bg-violet-50 opacity-20 ring-1 ring-white ring-inset"
@@ -114,7 +119,7 @@ function CodeSnippet() {
 				aria-hidden="true"
 				className="pointer-events-none absolute inset-0 ring-1 ring-white/10 ring-inset sm:rounded-3xl"
 			/>
-		</div>
+		</Reveal>
 	);
 }
 

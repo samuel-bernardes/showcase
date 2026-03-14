@@ -28,7 +28,6 @@ export default function Projects() {
 
 	return (
 		<div className="relative isolate overflow-hidden bg-gradient-to-b from-gray-100/20 dark:from-gray-900/20 mx-auto max-w-7xl px-6 py-24 sm:px-8">
-			{/* Cabeçalho */}
 			<div className="mb-8">
 				<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 					<h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
@@ -53,9 +52,7 @@ export default function Projects() {
 				</p>
 			</div>
 
-			{/* Conteúdo Principal - Imagem e Descrição lado a lado */}
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-				{/* Imagem do Projeto (40% da largura em desktop) */}
 				<div className="lg:col-span-1">
 					<div className="rounded-xl overflow-hidden shadow-lg ring-1 ring-gray-200 dark:ring-gray-800 h-full max-h-[600px]">
 						<img
@@ -66,7 +63,6 @@ export default function Projects() {
 					</div>
 				</div>
 
-				{/* Descrição (60% da largura em desktop) */}
 				<div className="lg:col-span-1">
 					<h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
 						{t('aboutProject')}
@@ -77,9 +73,7 @@ export default function Projects() {
 				</div>
 			</div>
 
-			{/* Features e Tecnologias */}
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-				{/* Funcionalidades */}
 				<div>
 					<h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
 						{t('features')}
@@ -112,7 +106,6 @@ export default function Projects() {
 					</ul>
 				</div>
 
-				{/* Tecnologias */}
 				<div>
 					<h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
 						{t('technologies')}

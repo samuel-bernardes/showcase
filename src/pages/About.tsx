@@ -4,6 +4,7 @@ import {
 	Galery,
 	HobbiesGrid,
 	ProfileCard,
+	Reveal,
 	Timeline,
 } from '../components';
 import { useTranslation } from 'react-i18next';
@@ -15,15 +16,13 @@ function About() {
 		<div className="relative isolate overflow-hidden bg-gradient-to-b from-gray-100/20 dark:from-gray-900/20">
 			<div className="max-w-7xl py-12 sm:py-24 mx-auto px-4 sm:px-8">
 				<div className="flex flex-col items-center gap-8 sm:items-start sm:flex-row sm:gap-12">
-					{/* Profile Card - Centralizado em mobile, alinhado à esquerda em desktop */}
-					<div className="sm:h-full">
+					<Reveal className="sm:h-full" delay={80}>
 						<div className="h-full flex items-center justify-center sm:block">
 							<ProfileCard />
 						</div>
-					</div>
+					</Reveal>
 
-					{/* Conteúdo do lado direito */}
-					<div className="flex flex-col gap-6 w-full max-w-2xl">
+					<Reveal className="flex flex-col gap-6 w-full max-w-2xl" delay={160}>
 						<h1 className="font-bold text-4xl sm:text-5xl text-gray-900 dark:text-gray-100 text-center sm:text-left">
 							{t('mainTitle.part1')}{' '}
 							<span className="text-violet-600 dark:text-violet-400">
@@ -35,7 +34,6 @@ function About() {
 							{t('description')}
 						</p>
 
-						{/* Estatísticas - Grid em mobile, flex em desktop */}
 						<div className="grid grid-cols-2 gap-4 sm:flex sm:gap-8 text-gray-900 dark:text-gray-100">
 							<div className="text-center sm:text-left">
 								<h4 className="text-5xl sm:text-6xl">+4</h4>
@@ -57,18 +55,16 @@ function About() {
 							</div>
 						</div>
 
-						{/* CodeSnippet - Ajuste de padding */}
 						<div className="mt-4 px-0 sm:px-6 lg:px-0">
 							<CodeSnippet />
 						</div>
-					</div>
+					</Reveal>
 				</div>
 			</div>
 
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 pb-24">
 				<div className="mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24">
-					{/* Left Column - Personal Story */}
-					<div className="w-full lg:w-1/2 space-y-8">
+					<Reveal className="w-full lg:w-1/2 space-y-8" delay={100}>
 						<div>
 							<h2 className="text-5xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-gray-100">
 								{t('personalStory.title.part1')}{' '}
@@ -81,17 +77,11 @@ function About() {
 								{t('personalStory.subtitle')}
 							</p>
 						</div>
-
-						{/* Hobbies Grid */}
 						<HobbiesGrid />
+					</Reveal>
 
-						{/* Personal Photo Carousel */}
-					</div>
-
-					{/* Right Column - Music & Timeline */}
-					<div className="w-full lg:w-1/2 space-y-8">
-						{/* Spotify Player */}
-						<div className="bg-gradient-to-br from-violet-900/20 to-purple-900/20 p-6 rounded-xl">
+					<Reveal className="w-full lg:w-1/2 space-y-8" delay={180}>
+						<div className="bg-gradient-to-br from-violet-900/20 to-purple-900/20 p-6 rounded-xl lift-hover">
 							<div className="flex items-center gap-3 mb-4">
 								<MusicalNoteIcon className="w-8 h-8 text-violet-400" />
 								<h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -117,14 +107,13 @@ function About() {
 							></iframe>
 						</div>
 
-						{/* Personal Timeline */}
-						<div className="bg-white/5 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+						<div className="bg-white/5 p-6 rounded-xl border border-gray-200 dark:border-gray-800 lift-hover">
 							<h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
 								{t('timelineSection.title')}
 							</h3>
 							<Timeline />
 						</div>
-					</div>
+					</Reveal>
 				</div>
 				<div className="mt-12">
 					<Galery />

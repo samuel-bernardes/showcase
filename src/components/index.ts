@@ -7,6 +7,7 @@ import Timeline from './Timeline';
 import ProjectCard from './ProjectCard';
 import LanguageSwitcher from './LanguageSwitcher';
 import Seo from './Seo';
+import Reveal from './Reveal';
 
 export {
 	MainLayout,
@@ -18,4 +19,5 @@ export {
 	ProjectCard,
 	LanguageSwitcher,
 	Seo,
+	Reveal,
 };

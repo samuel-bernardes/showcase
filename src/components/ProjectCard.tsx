@@ -14,21 +14,18 @@ function ProjectCard(props: IProjectCardProps) {
 		<Link to={`/projetos/${project.id}`}>
 			<article
 				key={project.id}
-				className="relative h-full isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pt-80 pb-8 sm:pt-48 lg:pt-80 hover:scale-[1.02] transition-transform duration-300 group"
+				className="relative h-full isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pt-80 pb-8 sm:pt-48 lg:pt-80 transition-all duration-500 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-950/20"
 			>
 				<img
 					alt={t('projectImageAlt', { title: project.title })}
 					src={project.imageUrl}
-					className="absolute inset-0 -z-10 h-full w-full object-cover brightness-90 group-hover:brightness-75 transition-all duration-500"
+					className="absolute inset-0 -z-10 h-full w-full object-cover brightness-90 group-hover:scale-105 group-hover:brightness-75 transition-all duration-700"
 				/>
 
-				{/* Overlay gradiente */}
 				<div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent" />
 
-				{/* Efeito de borda sutil */}
 				<div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 
-				{/* Metadados do projeto */}
 				<div className="flex flex-wrap items-center gap-y-1 text-sm/6 text-gray-300">
 					<div className="flex items-center gap-x-2">
 						<span className="inline-flex items-center rounded-md bg-gray-800/80 px-2 py-1 text-xs font-medium text-gray-300 ring-1 ring-inset ring-gray-700">
@@ -40,7 +37,6 @@ function ProjectCard(props: IProjectCardProps) {
 					</div>
 				</div>
 
-				{/* Título e descrição */}
 				<div className="mt-3">
 					<h3 className="text-xl font-semibold text-white">
 						<span className="absolute inset-0" />
@@ -51,7 +47,6 @@ function ProjectCard(props: IProjectCardProps) {
 					</p>
 				</div>
 
-				{/* Tecnologias utilizadas */}
 				<div className="mt-4 flex flex-wrap gap-2">
 					{project.technologies.map((tech) => (
 						<span
