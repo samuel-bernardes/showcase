@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { About, Contact, Home, Projects } from './pages';
-import { MainLayout } from './components';
+import { MainLayout, Seo } from './components';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
 
@@ -29,6 +29,7 @@ function Routes() {
 			element: (
 				<>
 					<ScrollToTop />
+					<Seo />
 					<MainLayout />
 				</>
 			),

@@ -13,7 +13,7 @@
 	},
 	"formulaDota": {
 		"description": "Uma plataforma completa de cursos e assinaturas, pensada para jogadores que desejam evoluir no cenário competitivo. O Formula chegou para transformar o cenário de Dota 2 no Brasil! Um projeto idealizado por Peter \"PPA\" chega para ensinar os caminhos para elevar o seu nível de gameplay! Na plataforma você vai encontrar cursos desde o básico ao avançado em gameplay, o método pro com professores especialistas em heróis específicos e a liga do Formula!",
-		"date": "Dez 2024 - Presente",
+		"date": "Dez 2024 - Julho 2025",
 		"category": "Aplicação WEB",
 		"features": [
 			"Integração com mercado pago",
@@ -54,6 +54,17 @@
 			"Player de vídeo customizado",
 			"Sistema de avaliação",
 			"Progresso do aluno"
+		]
+	},
+	"fsb": {
+		"description": "Plataforma educacional completa desenvolvida para a Fundação Souza Brasil, reunindo presença institucional e ambiente digital de aprendizado. O projeto contempla o site institucional da fundação e a plataforma da Escola Existencial Otávio de Oliveira Brasil (ESEX), organizando cursos, conteúdo educacional e jornadas de navegação com foco em clareza, confiança e boa experiência para alunos e visitantes.",
+		"date": "Abril 2025 - Dez 2025",
+		"category": "Plataforma educacional",
+		"features": [
+			"Site institucional da fundação",
+			"Site da plataforma educacional ESEX",
+			"Organização de cursos e conteúdo",
+			"Experiência responsiva com foco em educação"
 		]
 	}
 }

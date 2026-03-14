@@ -4,7 +4,9 @@ import { ProjectCard } from '../components';
 import { useTranslation } from 'react-i18next';
 
 function Home() {
-	const { t } = useTranslation('home');
+	const { t, i18n } = useTranslation('home');
+	const resumeHref =
+		i18n.resolvedLanguage === 'pt-BR' ? '/curriculo.pdf' : '/resume.pdf';
 
 	return (
 		<div className="relative isolate overflow-hidden bg-gradient-to-b from-gray-100/20 dark:from-gray-900/20">
@@ -24,8 +26,9 @@ function Home() {
 
 							<div className="mt-10 flex items-center gap-x-6">
 								<a
-									href="https://drive.google.com/file/d/121-upZKEai0Nxa8miwYTdxBbUt1B1-Ds/view?usp=sharing"
+									href={resumeHref}
 									target="_blank"
+									rel="noopener noreferrer"
 									className="rounded-md bg-violet-600 dark:bg-violet-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-violet-500 dark:hover:bg-violet-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
 								>
 									{t("downloadResume")}

@@ -13,7 +13,7 @@
 	},
 	"formulaDota": {
 		"description": "A complete platform of courses and subscriptions, designed for players who want to evolve in the competitive scene. Formula has arrived to transform the Dota 2 scene in Brazil! A project conceived by Peter \"PPA\" comes to teach the paths to elevate your gameplay level! On the platform you will find courses from basic to advanced in gameplay, the pro method with teachers specialized in specific heroes, and the Formula league!",
-		"date": "Dec 2024 - Present",
+		"date": "Dec 2024 - July 2025",
 		"category": "WEB Application",
 		"features": [
 			"Integration with Mercado Pago",
@@ -54,6 +54,17 @@
 			"Custom video player",
 			"Rating system",
 			"Student progress tracking"
+		]
+	},
+	"fsb": {
+		"description": "A complete educational platform developed for Fundação Souza Brasil, combining institutional presence with a digital learning environment. The project includes the foundation's institutional website and the Escola Existencial Otávio de Oliveira Brasil (ESEX) platform website, organizing courses, educational content, and user journeys with a strong focus on clarity, trust, and a smooth experience for students and visitors.",
+		"date": "April 2025 - Dec 2025",
+		"category": "Educational platform",
+		"features": [
+			"Foundation institutional website",
+			"ESEX educational platform website",
+			"Course and content organization",
+			"Responsive experience focused on educational"
 		]
 	}
 }

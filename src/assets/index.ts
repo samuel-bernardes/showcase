@@ -13,6 +13,7 @@ import obd from './obd.png';
 import pareFumar from './pareFumar.webp';
 import brasilFlag from './brasilFlag.png';
 import euaFlag from './euaFlag.png';
+import fsb from './fsb.png';
 
 export {
 	logoBlack,
@@ -28,6 +29,7 @@ export {
 	midasClub,
 	obd,
 	pareFumar,
-    brasilFlag,
-    euaFlag
+	brasilFlag,
+	euaFlag,
+	fsb,
 };

@@ -7,6 +7,11 @@ export default function Projects() {
 	const { id } = useParams();
 	const { t } = useTranslation(['projects', 'projectsData']);
 	const project = projects.find((p) => p.id === parseInt(id as string));
+	const dateLabel = project ? t(project.dateKey, { ns: 'projectsData' }) : '';
+	const isInProgress = project
+		? !project.completed &&
+			(dateLabel.includes('Presente') || dateLabel.includes('Present'))
+		: false;
 
 	if (!project) {
 		return (
@@ -29,20 +34,22 @@ export default function Projects() {
 					<h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
 						{project.title}
 					</h1>
-					<div className="flex gap-3">
-						<a
-							href={project.href}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="inline-flex items-center rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-500"
-						>
-							{t('viewProject')}
-							<ArrowTopRightOnSquareIcon className="h-4 w-4 ml-2" />
-						</a>
-					</div>
+					{project.href && (
+						<div className="flex gap-3">
+							<a
+								href={project.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-500"
+							>
+								{t('viewProject')}
+								<ArrowTopRightOnSquareIcon className="h-4 w-4 ml-2" />
+							</a>
+						</div>
+					)}
 				</div>
 				<p className="mt-2 text-gray-500 dark:text-gray-400">
-					{t(project.dateKey, { ns: 'projectsData' })}
+					{dateLabel}
 				</p>
 			</div>
 
@@ -133,8 +140,7 @@ export default function Projects() {
 							{t('status')}
 						</h3>
 						<p className="text-gray-600 dark:text-gray-300">
-							{t(project.dateKey, { ns: 'projectsData' }).includes('Presente') || 
-							 t(project.dateKey, { ns: 'projectsData' }).includes('Present') ? (
+							{isInProgress ? (
 								<span className="inline-flex items-center rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400">
 									{t('inProgress')}
 								</span>
@@ -149,9 +155,7 @@ export default function Projects() {
 						<h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
 							{t('period')}
 						</h3>
-						<p className="text-gray-600 dark:text-gray-300">
-							{t(project.dateKey, { ns: 'projectsData' })}
-						</p>
+						<p className="text-gray-600 dark:text-gray-300">{dateLabel}</p>
 					</div>
 					<div>
 						<h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
@@ -161,22 +165,24 @@ export default function Projects() {
 							{t(project.categoryKey, { ns: 'projectsData' })}
 						</p>
 					</div>
-					<div>
-						<h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-							{t('links')}
-						</h3>
-						<div className="flex flex-col space-y-2">
-							<a
-								href={project.href}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="inline-flex items-center text-violet-600 dark:text-violet-400 hover:text-violet-800 dark:hover:text-violet-300 text-sm"
-							>
-								<ArrowTopRightOnSquareIcon className="h-4 w-4 mr-1.5" />
-								{t('accessProject')}
-							</a>
+					{project.href && (
+						<div>
+							<h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
+								{t('links')}
+							</h3>
+							<div className="flex flex-col space-y-2">
+								<a
+									href={project.href}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="inline-flex items-center text-violet-600 dark:text-violet-400 hover:text-violet-800 dark:hover:text-violet-300 text-sm"
+								>
+									<ArrowTopRightOnSquareIcon className="h-4 w-4 mr-1.5" />
+									{t('accessProject')}
+								</a>
+							</div>
 						</div>
-					</div>
+					)}
 				</div>
 			</div>
 		</div>
