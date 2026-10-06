@@ -59,10 +59,10 @@ function CodeSnippet() {
 								<span className="text-[#f1fa8c]">"REACT"</span>
 								<span className="text-[#ff79c6]">,</span>{' '}
 								<span className="text-[#f1fa8c]">
-									"REACT NATIVE"
+									"FASTAPI"
 								</span>
 								<span className="text-[#ff79c6]">,</span>{' '}
-								<span className="text-[#f1fa8c]">".NET"</span>
+								<span className="text-[#f1fa8c]">"AWS"</span>
 								<span className="text-[#ff79c6]">,</span>{' '}
 								<span className="text-[#f1fa8c]">"NODE"</span>
 								<span className="text-[#ff79c6]">]</span>

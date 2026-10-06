@@ -16,7 +16,7 @@ export const projects = [
 		imageUrl: dataviva,
 		dateKey: 'dataviva.date',
 		categoryKey: 'dataviva.category',
-		technologies: ['Python', 'HTML e CSS', 'MySQL', 'AWS'],
+		technologies: ['React', 'Python', 'FastAPI', 'Spark', 'PostgreSQL', 'AWS'],
 		featuresKeys: [
 			'dataviva.features.0',
 			'dataviva.features.1',

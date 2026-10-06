@@ -4,7 +4,7 @@ import { useLocation } from 'react-router';
 const SITE_URL = 'https://www.samuelbernardes.engineer';
 const DEFAULT_TITLE = 'Samuel Bernardes';
 const DEFAULT_DESCRIPTION =
-	'Portfólio de Samuel Bernardes, engenheiro e desenvolvedor de software com projetos em React, React Native, TypeScript e soluções web e mobile.';
+	'Portfólio de Samuel Bernardes, engenheiro de software Full Stack com experiência em React, TypeScript, Python, Node.js, AWS e engenharia de dados.';
 
 const routeMetadata: Record<
 	string,
