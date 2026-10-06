@@ -36,7 +36,7 @@ function About() {
 
 						<div className="grid grid-cols-2 gap-4 sm:flex sm:gap-8 text-gray-900 dark:text-gray-100">
 							<div className="text-center sm:text-left">
-								<h4 className="text-5xl sm:text-6xl">+4</h4>
+								<h4 className="text-5xl sm:text-6xl">+5</h4>
 								<span className="text-sm sm:text-base">
 									{t('stats.yearsExperience')}
 								</span>
@@ -48,7 +48,7 @@ function About() {
 								</span>
 							</div>
 							<div className="col-span-2 text-center sm:text-left sm:col-auto">
-								<h4 className="text-5xl sm:text-6xl">+25</h4>
+								<h4 className="text-5xl sm:text-6xl">+30</h4>
 								<span className="text-sm sm:text-base">
 									{t('stats.toolsUsed')}
 								</span>
